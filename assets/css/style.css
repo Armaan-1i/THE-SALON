@@ -2350,3 +2350,23 @@ ul {
   }
 }
 
+/* --- Tablet Portrait: Keep content compact without squeezing mobile layouts --- */
+@media (min-width: 540px) and (max-width: 768px) {
+  .featured-tiles-grid,
+  .form-grid-2col,
+  .staff-cards-grid,
+  .customizer-grid-clean,
+  .gallery-masonry-grid,
+  .gallery-page-grid,
+  .why-statements-grid,
+  .steps-flow-pills,
+  .groom-services-bullets {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .featured-tiles-grid,
+  .gallery-masonry-grid,
+  .gallery-page-grid {
+    gap: 1.25rem;
+  }
+}
