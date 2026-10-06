@@ -518,13 +518,13 @@ ul {
 
 .hero-split-grid {
   display: grid;
-  grid-template-columns: 0.85fr 1.15fr;
-  gap: 4rem;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: clamp(2rem, 4vw, 4rem);
   align-items: center;
 }
 
 .hero-text-col {
-  padding-right: 1.5rem;
+  padding-right: 0;
 }
 
 .hero-label-wrap {
@@ -536,7 +536,7 @@ ul {
 
 .hero-main-title {
   font-family: var(--font-serif);
-  font-size: clamp(3rem, 5.5vw, 4.8rem);
+  font-size: clamp(2.7rem, 4.2vw, 3.8rem);
   font-weight: 500;
   line-height: 1.05;
   letter-spacing: -0.02em;
@@ -2368,5 +2368,16 @@ ul {
   .gallery-masonry-grid,
   .gallery-page-grid {
     gap: 1.25rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero-split-grid {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: 2rem;
+  }
+
+  .hero-main-title {
+    font-size: clamp(1.9rem, 4.2vw, 2.8rem);
   }
 }
