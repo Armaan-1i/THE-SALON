@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Primary Meta Tags -->
+  <title>Book Appointment | THE SALON</title>
+  <meta name="title" content="Book Appointment | THE SALON">
+  <meta name="description" content="Book an appointment with THE SALON in Dighwara. Select your grooming services and contact staff members Suraj Thakur (8252681657) or Karan Thakur (7481933120) via WhatsApp or direct call.">
+  <meta name="author" content="THE SALON">
+  <meta name="theme-color" content="#F4EFE7">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Minimal Sticky Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-container">
+      <!-- Original Brand Logo -->
+      <a href="index.html" class="brand-logo" aria-label="THE SALON Home">
+        <div class="logo-frame">
+          <img src="assets/images/logo.png" alt="THE SALON Logo" class="official-logo-img">
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">THE SALON</span>
+          <span class="brand-tag">MEN'S GROOMING</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Action -->
+      <div class="header-actions">
+        <a href="book-appointment.html" class="btn btn-espresso btn-sm" style="background-color: var(--accent-champagne-dark); border-color: var(--accent-champagne-dark);">
+          <span>Book Appointment</span>
+        </a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer" id="mobileDrawer">
+      <nav class="mobile-nav" aria-label="Mobile Navigation">
+        <ul class="mobile-links">
+          <li><a href="index.html" class="mobile-link">Home</a></li>
+          <li><a href="services.html" class="mobile-link">Services & Pricing</a></li>
+          <li><a href="about.html" class="mobile-link">About THE SALON</a></li>
+          <li><a href="gallery.html" class="mobile-link">Gallery</a></li>
+          <li><a href="contact.html" class="mobile-link">Location & Contact</a></li>
+          <li><a href="book-appointment.html" class="mobile-link active">Book Appointment</a></li>
+        </ul>
+        <div class="mobile-drawer-footer">
+          <div class="drawer-contact-info">
+            <p class="drawer-staff-title">Salon Staff Contacts:</p>
+            <p class="drawer-staff-row"><strong>Suraj Thakur:</strong> <a href="tel:8252681657">8252681657</a></p>
+            <p class="drawer-staff-row"><strong>Karan Thakur:</strong> <a href="tel:7481933120">7481933120</a></p>
+          </div>
+          <a href="book-appointment.html" class="btn btn-espresso btn-block">
+            Book Appointment
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Page Header Banner -->
+    <div class="page-header-banner">
+      <div class="container">
+        <span class="page-eyebrow">ONLINE APPOINTMENT SYSTEM</span>
+        <h1 class="page-title">Book An Appointment</h1>
+        <p class="page-subtitle">Fill in your preferred details, select your services, and connect directly with our salon staff via WhatsApp or Call.</p>
+      </div>
+    </div>
+
+    <!-- Interactive Appointment & Booking Section -->
+    <section class="customizer-minimal-section">
+      <div class="container">
+        <div class="customizer-box-clean">
+          
+          <!-- Step 1: Appointment Details Form -->
+          <div class="booking-form-wrap">
+            <div class="section-header-editorial" style="margin-bottom: 2rem;">
+              <span class="eyebrow-tag">STEP 1 &bull; APPOINTMENT DETAILS</span>
+              <h2 class="section-title-editorial" style="font-size: 2.2rem; margin-bottom: 0.25rem;">Enter Your Preferences</h2>
+              <p class="text-muted">Provide your appointment timing and details below.</p>
+            </div>
+
+            <div class="form-grid-2col">
+              <!-- Name Field -->
+              <div class="form-group">
+                <label for="custName" class="form-label">1. Your Full Name</label>
+                <input type="text" id="custName" class="form-input" placeholder="e.g. Rahul Sharma" autocomplete="name">
+              </div>
+
+              <!-- Service Dropdown / Quick Choice -->
+              <div class="form-group">
+                <label for="serviceSelect" class="form-label">2. Primary Service</label>
+                <select id="serviceSelect" class="form-select">
+                  <option value="Hair Cut (₹70)">Hair Cut (₹70)</option>
+                  <option value="Hair Cut + Shaving (₹140)">Hair Cut + Shaving (₹140)</option>
+                  <option value="Beard Set / Shaping (₹70)">Beard Set / Shaping (₹70)</option>
+                  <option value="Hair Colour (From ₹150)">Hair Colour (From ₹150)</option>
+                  <option value="Oxy Hair Spa (₹500)">Oxy Hair Spa (₹500)</option>
+                  <option value="Nature's Hair Spa (₹600)">Nature's Hair Spa (₹600)</option>
+                  <option value="D-Tan Treatment (From ₹500)">D-Tan Treatment (From ₹500)</option>
+                  <option value="Facial Treatment (From ₹1200)">Facial Treatment (From ₹1200)</option>
+                  <option value="Groom Special Package">Groom Special Package</option>
+                  <option value="Full Grooming Package">Full Grooming Package</option>
+                  <option value="Home Service Visit">Doorstep Home Service</option>
+                </select>
+              </div>
+
+              <!-- Preferred Date Field -->
+              <div class="form-group">
+                <label for="prefDate" class="form-label">3. Preferred Date</label>
+                <input type="date" id="prefDate" class="form-input">
+              </div>
+
+              <!-- Preferred Time Slot -->
+              <div class="form-group">
+                <label for="prefTime" class="form-label">4. Preferred Time</label>
+                <select id="prefTime" class="form-select">
+                  <option value="08:00 AM">08:00 AM (Opening)</option>
+                  <option value="09:00 AM">09:00 AM</option>
+                  <option value="10:00 AM" selected>10:00 AM</option>
+                  <option value="11:00 AM">11:00 AM</option>
+                  <option value="12:00 PM">12:00 PM</option>
+                  <option value="01:00 PM">01:00 PM</option>
+                  <option value="02:00 PM">02:00 PM</option>
+                  <option value="03:00 PM">03:00 PM</option>
+                  <option value="04:00 PM">04:00 PM</option>
+                  <option value="05:00 PM">05:00 PM</option>
+                  <option value="06:00 PM">06:00 PM</option>
+                  <option value="07:00 PM">07:00 PM</option>
+                  <option value="08:00 PM">08:00 PM</option>
+                  <option value="Flexible / Next Available Slot">Flexible / Next Available Slot</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Optional Message -->
+            <div class="form-group">
+              <label for="custMessage" class="form-label">5. Optional Message / Note</label>
+              <textarea id="custMessage" class="form-textarea" placeholder="Any specific styling instructions, questions, or home service address..."></textarea>
+            </div>
+          </div>
+
+          <!-- Step 2: Multi-Service Total Estimator -->
+          <div class="customizer-clean-header">
+            <div>
+              <span class="eyebrow-tag">STEP 2 &bull; OPTIONAL ADD-ONS & ESTIMATE</span>
+              <h3 class="section-title-editorial" style="font-size: 1.85rem; margin-bottom: 0.25rem;">Select Multiple Services</h3>
+              <p class="text-muted">Tap any service to calculate an exact estimated total for your visit.</p>
+            </div>
+            <div class="customizer-sum-wrap">
+              <span class="customizer-sum-amount" id="totalAmount">₹0</span>
+              <span class="customizer-sum-label" id="selectedCount">0 services selected</span>
+            </div>
+          </div>
+
+          <!-- Interactive Grid Populated by JavaScript -->
+          <div class="customizer-grid-clean" id="customizerGrid"></div>
+
+          <!-- Step 3: Equal Staff Selection -->
+          <div class="staff-selection-section">
+            <div class="staff-selection-header">
+              <span class="eyebrow-tag">STEP 3 &bull; CONFIRMATION</span>
+              <h3 class="staff-selection-title">Choose who you'd like to contact</h3>
+              <p class="staff-selection-desc">Connect directly with our salon staff to confirm your booking.</p>
+            </div>
+
+            <div class="staff-cards-grid">
+              
+              <!-- Option 1: Suraj Thakur -->
+              <div class="staff-contact-card">
+                <div class="staff-card-header">
+                  <h4 class="staff-name">Suraj Thakur</h4>
+                  <a href="tel:8252681657" class="staff-phone-link">8252681657</a>
+                  <span class="staff-role-tag">Call / WhatsApp</span>
+                </div>
+                <div class="staff-actions-row">
+                  <a href="https://wa.me/918252681657" id="surajWaBtn" target="_blank" rel="noopener noreferrer" class="btn btn-staff-wa">
+                    <span>Book with Suraj on WhatsApp</span>
+                  </a>
+                  <a href="tel:8252681657" id="surajCallBtn" class="btn btn-staff-call">
+                    <span>Call Suraj (8252681657)</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Option 2: Karan Thakur -->
+              <div class="staff-contact-card">
+                <div class="staff-card-header">
+                  <h4 class="staff-name">Karan Thakur</h4>
+                  <a href="tel:7481933120" class="staff-phone-link">7481933120</a>
+                  <span class="staff-role-tag">Call / WhatsApp</span>
+                </div>
+                <div class="staff-actions-row">
+                  <a href="https://wa.me/917481933120" id="karanWaBtn" target="_blank" rel="noopener noreferrer" class="btn btn-staff-wa">
+                    <span>Book with Karan on WhatsApp</span>
+                  </a>
+                  <a href="tel:7481933120" id="karanCallBtn" class="btn btn-staff-call">
+                    <span>Call Karan (7481933120)</span>
+                  </a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Alternative Direct Assistance Section -->
+    <section class="home-service-editorial-section" style="background-color: var(--bg-secondary);">
+      <div class="container">
+        <div class="home-service-split-grid">
+          <div class="home-service-text-col">
+            <span class="eyebrow-tag">DIRECT ASSISTANCE</span>
+            <h2 class="home-service-title">Need Immediate Help?</h2>
+            <p class="home-service-desc">
+              You can call either staff member anytime during business hours (8:00 AM – 9:00 PM) to check immediate seat availability, inquire about Groom Special packages, or arrange doorstep home service.
+            </p>
+            <div class="contact-buttons-row">
+              <a href="tel:8252681657" class="btn btn-espresso btn-sm">
+                <span>Call Suraj (8252681657)</span>
+              </a>
+              <a href="tel:7481933120" class="btn btn-espresso btn-sm">
+                <span>Call Karan (7481933120)</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="home-service-action-col">
+            <div class="home-service-tile-callout" style="background-color: var(--bg-primary);">
+              <h3 class="callout-title">Salon Hours & Walk-ins</h3>
+              <p class="about-body-text" style="font-size: 0.95rem; margin-bottom: 1.5rem;">
+                Open 7 Days a week &bull; 8:00 AM – 9:00 PM<br>
+                Walk-ins always welcome in our air-conditioned lounge.
+              </p>
+              <a href="contact.html" class="btn btn-outline btn-block">
+                <span>View Salon Location on Map</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Minimal Footer -->
+  <footer class="site-footer-minimal">
+    <div class="container">
+      <div class="footer-top-row">
+        <div class="brand-logo">
+          <div class="logo-frame">
+            <img src="assets/images/logo.png" alt="THE SALON Logo" class="official-logo-img">
+          </div>
+          <div class="brand-text">
+            <span class="brand-title" style="color: var(--text-light);">THE SALON</span>
+            <span class="brand-tag" style="color: var(--text-light-muted);">MEN'S GROOMING</span>
+          </div>
+        </div>
+
+        <div class="footer-links-row">
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="about.html">About</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="contact.html">Contact</a>
+          <a href="book-appointment.html">Book Appointment</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom-row">
+        <span>Salon Staff Contacts: Suraj Thakur (<a href="tel:8252681657" style="color: var(--text-light);">8252681657</a>) &bull; Karan Thakur (<a href="tel:7481933120" style="color: var(--text-light);">7481933120</a>)</span>
+        <span>&copy; 2026 THE SALON. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Sticky Bar -->
+  <div class="mobile-sticky-bar" id="mobileStickyBar" aria-label="Quick Mobile Actions">
+    <div class="mobile-bar-content">
+      <a href="tel:8252681657" class="mobile-bar-btn btn-mobile-call">
+        <span>Call Suraj</span>
+      </a>
+      <a href="tel:7481933120" class="mobile-bar-btn btn-mobile-call">
+        <span>Call Karan</span>
+      </a>
+      <a href="book-appointment.html" class="mobile-bar-btn btn-mobile-wa">
+        <span>Book on WhatsApp</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
