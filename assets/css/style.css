@@ -1268,7 +1268,10 @@ ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
   padding: 1rem 1.25rem;
+  color: var(--text-dark);
+  text-align: left;
   background-color: var(--bg-primary);
   border: 1px solid var(--border-light);
   cursor: pointer;
@@ -1278,6 +1281,11 @@ ul {
 
 .clean-select-label:hover {
   border-color: var(--text-dark);
+}
+
+.clean-select-label:focus-visible {
+  outline: 2px solid var(--accent-champagne-dark);
+  outline-offset: 2px;
 }
 
 .clean-select-label.checked {

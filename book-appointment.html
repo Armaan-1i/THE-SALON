@@ -117,33 +117,15 @@
                 <input type="text" id="custName" class="form-input" placeholder="e.g. Rahul Sharma" autocomplete="name">
               </div>
 
-              <!-- Service Dropdown / Quick Choice -->
-              <div class="form-group">
-                <label for="serviceSelect" class="form-label">2. Primary Service</label>
-                <select id="serviceSelect" class="form-select">
-                  <option value="Hair Cut (₹70)">Hair Cut (₹70)</option>
-                  <option value="Hair Cut + Shaving (₹140)">Hair Cut + Shaving (₹140)</option>
-                  <option value="Beard Set / Shaping (₹70)">Beard Set / Shaping (₹70)</option>
-                  <option value="Hair Colour (From ₹150)">Hair Colour (From ₹150)</option>
-                  <option value="Oxy Hair Spa (₹500)">Oxy Hair Spa (₹500)</option>
-                  <option value="Nature's Hair Spa (₹600)">Nature's Hair Spa (₹600)</option>
-                  <option value="D-Tan Treatment (From ₹500)">D-Tan Treatment (From ₹500)</option>
-                  <option value="Facial Treatment (From ₹1200)">Facial Treatment (From ₹1200)</option>
-                  <option value="Groom Special Package">Groom Special Package</option>
-                  <option value="Full Grooming Package">Full Grooming Package</option>
-                  <option value="Home Service Visit">Doorstep Home Service</option>
-                </select>
-              </div>
-
               <!-- Preferred Date Field -->
               <div class="form-group">
-                <label for="prefDate" class="form-label">3. Preferred Date</label>
+                <label for="prefDate" class="form-label">2. Preferred Date</label>
                 <input type="date" id="prefDate" class="form-input">
               </div>
 
               <!-- Preferred Time Slot -->
               <div class="form-group">
-                <label for="prefTime" class="form-label">4. Preferred Time</label>
+                <label for="prefTime" class="form-label">3. Preferred Time</label>
                 <select id="prefTime" class="form-select">
                   <option value="08:00 AM">08:00 AM (Opening)</option>
                   <option value="09:00 AM">09:00 AM</option>
@@ -165,26 +147,26 @@
 
             <!-- Optional Message -->
             <div class="form-group">
-              <label for="custMessage" class="form-label">5. Optional Message / Note</label>
+              <label for="custMessage" class="form-label">4. Optional Message / Note</label>
               <textarea id="custMessage" class="form-textarea" placeholder="Any specific styling instructions, questions, or home service address..."></textarea>
             </div>
-          </div>
 
-          <!-- Step 2: Multi-Service Total Estimator -->
-          <div class="customizer-clean-header">
-            <div>
-              <span class="eyebrow-tag">STEP 2 &bull; OPTIONAL ADD-ONS & ESTIMATE</span>
-              <h3 class="section-title-editorial" style="font-size: 1.85rem; margin-bottom: 0.25rem;">Select Multiple Services</h3>
-              <p class="text-muted">Tap any service to calculate an exact estimated total for your visit.</p>
+            <!-- Step 2: Multi-Service Selection -->
+            <div class="customizer-clean-header">
+              <div>
+                <span class="eyebrow-tag">STEP 2 &bull; SELECT ALL SERVICES YOU WANT</span>
+                <h3 class="section-title-editorial" style="font-size: 1.85rem; margin-bottom: 0.25rem;">Choose Your Services</h3>
+                <p class="text-muted">Tap as many services as you need. Your estimated total updates automatically.</p>
+              </div>
+              <div class="customizer-sum-wrap">
+                <span class="customizer-sum-amount" id="totalAmount">₹0</span>
+                <span class="customizer-sum-label" id="selectedCount">0 services selected</span>
+              </div>
             </div>
-            <div class="customizer-sum-wrap">
-              <span class="customizer-sum-amount" id="totalAmount">₹0</span>
-              <span class="customizer-sum-label" id="selectedCount">0 services selected</span>
-            </div>
-          </div>
 
-          <!-- Interactive Grid Populated by JavaScript -->
-          <div class="customizer-grid-clean" id="customizerGrid"></div>
+            <!-- Interactive Grid Populated by JavaScript -->
+            <div class="customizer-grid-clean" id="customizerGrid"></div>
+          </div>
 
           <!-- Step 3: Equal Staff Selection -->
           <div class="staff-selection-section">
@@ -314,7 +296,7 @@
       <a href="tel:7481933120" class="mobile-bar-btn btn-mobile-call">
         <span>Call Karan</span>
       </a>
-      <a href="book-appointment.html" class="mobile-bar-btn btn-mobile-wa">
+      <a href="https://wa.me/918252681657" id="mobileBookingWaBtn" target="_blank" rel="noopener noreferrer" class="mobile-bar-btn btn-mobile-wa">
         <span>Book on WhatsApp</span>
       </a>
     </div>

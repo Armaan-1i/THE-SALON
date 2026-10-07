@@ -113,7 +113,6 @@ function initAppointmentSystem() {
   
   // Inputs
   const nameInput = document.getElementById('custName');
-  const serviceSelect = document.getElementById('serviceSelect');
   const dateInput = document.getElementById('prefDate');
   const timeSelect = document.getElementById('prefTime');
   const messageInput = document.getElementById('custMessage');
@@ -123,6 +122,7 @@ function initAppointmentSystem() {
   const karanWaBtn = document.getElementById('karanWaBtn');
   const surajCallBtn = document.getElementById('surajCallBtn');
   const karanCallBtn = document.getElementById('karanCallBtn');
+  const mobileBookingWaBtn = document.getElementById('mobileBookingWaBtn');
 
   // Set default date to today if empty
   if (dateInput && !dateInput.value) {
@@ -163,44 +163,38 @@ function initAppointmentSystem() {
   const selectedServices = new Set();
 
   if (customizerGrid) {
-    // Render selectable labels
+    // Render selectable services
     customizerGrid.innerHTML = servicesList.map(srv => `
-      <label class="clean-select-label" data-id="${srv.id}">
+      <button type="button" class="clean-select-label" data-id="${srv.id}" aria-pressed="false">
         <span class="clean-item-name">${srv.name}</span>
         <span class="clean-item-price">₹${srv.price.toLocaleString('en-IN')}</span>
-      </label>
+      </button>
     `).join('');
 
-    const labels = customizerGrid.querySelectorAll('.clean-select-label');
-    labels.forEach(label => {
-      label.addEventListener('click', () => {
-        const srvId = label.getAttribute('data-id');
+    const serviceButtons = customizerGrid.querySelectorAll('.clean-select-label');
+    serviceButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const srvId = button.getAttribute('data-id');
         const service = servicesList.find(s => s.id === srvId);
         if (!service) return;
 
         if (selectedServices.has(service)) {
           selectedServices.delete(service);
-          label.classList.remove('checked');
+          button.classList.remove('checked');
+          button.setAttribute('aria-pressed', 'false');
         } else {
           selectedServices.add(service);
-          label.classList.add('checked');
+          button.classList.add('checked');
+          button.setAttribute('aria-pressed', 'true');
         }
 
         updateAppointmentDetails();
       });
     });
-
-    // Default select Hair Cut
-    const defaultCut = servicesList.find(s => s.id === 'cut');
-    if (defaultCut) {
-      selectedServices.add(defaultCut);
-      const cutLabel = customizerGrid.querySelector('[data-id="cut"]');
-      if (cutLabel) cutLabel.classList.add('checked');
-    }
   }
 
   // Bind input listeners
-  [nameInput, serviceSelect, dateInput, timeSelect, messageInput].forEach(elem => {
+  [nameInput, dateInput, timeSelect, messageInput].forEach(elem => {
     if (elem) {
       elem.addEventListener('input', updateAppointmentDetails);
       elem.addEventListener('change', updateAppointmentDetails);
@@ -223,13 +217,9 @@ function initAppointmentSystem() {
     }
 
     // Determine service string
-    let serviceStr = '';
+    let serviceStr = 'Not selected';
     if (itemsArray.length > 0) {
       serviceStr = itemsArray.map(item => item.name).join(', ') + ` (₹${total.toLocaleString('en-IN')})`;
-    } else if (serviceSelect && serviceSelect.value) {
-      serviceStr = serviceSelect.value;
-    } else {
-      serviceStr = 'Hair Cut & Styling';
     }
 
     // Collect field values
@@ -253,6 +243,9 @@ function initAppointmentSystem() {
     if (surajWaBtn) {
       surajWaBtn.href = `https://wa.me/${STAFF_SURAJ.waNumber}?text=${encodedMsg}`;
     }
+    if (mobileBookingWaBtn) {
+      mobileBookingWaBtn.href = `https://wa.me/${STAFF_SURAJ.waNumber}?text=${encodedMsg}`;
+    }
     if (surajCallBtn) {
       surajCallBtn.href = `tel:${STAFF_SURAJ.phone}`;
     }
@@ -269,4 +262,3 @@ function initAppointmentSystem() {
   // Initial calculation
   updateAppointmentDetails();
 }
-
